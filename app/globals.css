@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --global-background-color: black;
+  --slider-padding: 2rem;
+}
+
+body {
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+  min-height: 100vh;
+}
