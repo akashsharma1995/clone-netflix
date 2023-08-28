@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <nav className="relative max-w-screen-lg m-auto z-10 px-4">
+    <nav className="relative max-w-screen-lg m-auto z-10 px-4 w-full">
       <ul className="flex items-center justify-between h-[70px] ">
         <li>
           <Image
