@@ -77,24 +77,16 @@ const Carousel = ({ movies: results }) => {
     const response = await getMovieCast(id);
     if (response.success) {
       // Show only 5 records
-      const cast = response?.data?.cast?.length > 5 ? response?.data.cast.slice(0, 5) : response?.data?.cast;
-      console.log("cast = ", cast)
+      const cast =
+        response?.data?.cast?.length > 5
+          ? response?.data.cast.slice(0, 5)
+          : response?.data?.cast;
       setCastDetails({ ...castDetails, [id]: cast });
       setLoadingCast(false);
     } else {
       // log error
       setLoadingCast(false);
     }
-    // try {
-    //   const res = await fetch(`${tmdbBaseURL}/3/movie/${id}/credits?language=en-US`, options);
-    //   const data = await res.json();
-    //   const cast = data?.cast?.length > 5 ? data.cast.slice(0, 5) :  data?.cast;
-    //   console.log({...castDetails, [id]: cast});
-    //   setCastDetails({...castDetails, [id]: cast});
-    //   setLoadingCast(false);
-    // }catch(err) {
-    //   console.log("err = ",err);
-    // }
   };
 
   return (

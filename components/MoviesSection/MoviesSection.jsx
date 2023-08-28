@@ -2,7 +2,6 @@ import React from "react";
 import MovieCarousel from "../MovieCarousel/Carousel";
 
 const MoviesSection = ({ title, movies }) => {
-  console.log(movies)
   if (movies?.length === 0) {
     return null;
   }

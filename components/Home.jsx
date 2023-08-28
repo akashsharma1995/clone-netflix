@@ -10,7 +10,6 @@ const Home = ({ movies }) => {
       <Banner />
       <Divider />
       <MoviesSection movies={movies} title="Top Rated Movies" />
-      <Divider />
     </>
   );
 };
