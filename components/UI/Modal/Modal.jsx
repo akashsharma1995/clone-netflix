@@ -13,6 +13,9 @@ const Modal = ({ handleModalClose, children }) => {
         transition={{ duration: 0.2 }}
         exit={{ opacity: 0, y: 300 }}
         className="m-auto border border-solid border-zinc-400 w-full min-h-[100vh] sm:min-h-fit max-w-[600px] sm:rounded-md relative backdrop-blur-lg"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
         <div className="flex justify-end px-5 py-2.5 border-b border-solid border-b-zinc-400">
           <span onClick={() => handleModalClose()} className="text-white cursor-pointer">&#10006;</span>
